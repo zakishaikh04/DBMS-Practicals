@@ -6,8 +6,8 @@ from datetime import datetime
 
 mydb = mysql.connector.connect(
   host="localhost",
-  user="root",
-  password="zaki.04"
+  user=YOUR_USERNAME,
+  password=YOUR_PASSWORD
 )
 
 mycursor = mydb.cursor()
@@ -64,16 +64,7 @@ def calc():
   gst=(18*base)/100
   total=base+gst
 
-  sql = ("UPDATE hospital SET bill=%s WHERE Patient_Name=%s")
-  val = (total, nam)
-  try:
-      mycursor.execute(sql, val)
-      mydb.commit()
-      messagebox.showinfo('TOTAL BILL ',total)
-  except:
-      mydb.rollback()
-      messagebox.showerror('Error','Please Insert Correct Data')
-  res1()
+  
 
 def res1():
   e1.delete(0, END)
