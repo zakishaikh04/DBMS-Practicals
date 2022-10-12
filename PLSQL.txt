@@ -1,0 +1,20 @@
+create or replace procedure distinction(a number, b number, c number) is percent number;
+total number;
+begin
+total := a + b + c;
+percent := (total/300)*100;
+if (percent>=80) then
+dbms_output.put_line('You Passed with Distinction and your Percent is '|| percent);
+elsif ((percent>=60)and(percent<80))then
+dbms_output.put_line('You Passed with First class and your Percent is '|| percent);
+elsif ((percent>=50)and(percent<60))then
+dbms_output.put_line('You Passed with Second class and your Percent is '|| percent);
+elsif ((percent>=40)and(percent<50))then
+dbms_output.put_line('You Passed with Third class and your Percent is '|| percent);
+elsif ((percent>=30)and(percent<40))then
+dbms_output.put_line('You Passed and your Percent is '|| percent);
+else
+dbms_output.put_line('You have Failed');
+end if;
+end;
+/
