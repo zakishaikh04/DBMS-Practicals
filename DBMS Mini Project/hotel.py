@@ -153,34 +153,7 @@ while(True):
         )
         e4.pack(pady=7, ipadx=5, ipady=5)
 
-        lbl6 = Label(
-            win,
-            text=('Check-Out Date (YYYY-MM-DD)'),
-            font=("Comic sans ms", 14),
-            bg=("#000000"),
-            fg=("#ffffff")
-        )
-        lbl6.pack()
-
-        e5 = Entry(
-            win,
-            font=("Verdana")
-        )
-        e5.pack(pady=7, ipadx=5, ipady=5)
-
-        b1 = Button(
-            win,
-            text=("Register"),
-            font=("Caomic sans ms", 12),
-            width=14,
-            bg=("#4C4B4B"),
-            fg=("#6ab04c"),
-            relief="raised",
-            command=reg
-        )
-        b1.pack(pady=15)
-
-        win.mainloop()
+        
     elif(a==2):
         win = tkinter.Tk()
         win.geometry("600x500")
