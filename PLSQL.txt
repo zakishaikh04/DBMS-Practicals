@@ -1,0 +1,17 @@
+declare
+radius number; 
+area number(5,2);
+error EXCEPTION;
+begin 
+radius :=&r; 
+if (radius>=5 and radius<=9) then
+area := 3.14*radius*radius;  
+insert into areas values(radius,area);
+else
+raise error;
+end if;
+EXCEPTION
+when error then
+dbms_output.put_line('Enter value between 5 and 9');
+end; 
+/
